@@ -87,6 +87,7 @@ fn set_uvs(mut meshes: ResMut<Assets<Mesh>>, mesh2ds: Query<&Mesh2d, Added<Mesh2
 // This is the struct that will be passed to the shader
 #[derive(Asset, TypePath, AsBindGroup, Debug, Clone)]
 struct CustomMaterial {
+    /// This color will be replaced by the shader.
     #[uniform(0)]
     replace_color: LinearRgba,
 }
