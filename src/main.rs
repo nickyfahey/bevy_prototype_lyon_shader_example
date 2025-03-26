@@ -67,12 +67,13 @@ fn set_uvs(mut meshes: ResMut<Assets<Mesh>>, mesh2ds: Query<&Mesh2d, Added<Mesh2
             Vec2::new(acc.x.max(*x), acc.y.max(*y))
         });
 
+        let x_range = max.x - min.y;
+        let y_range = max.y - min.y;
+
         // UVs go from [0,0] in the top left to [1,1] in the bottom right.
         let uvs: Vec<_> = positions
             .iter()
             .map(|[x, y, _]| {
-                let x_range = max.x - min.y;
-                let y_range = max.y - min.y;
                 let uv_x = (x - min.x) / x_range;
                 let uv_y = 1. - ((y - min.y) / y_range);
                 [uv_x, uv_y]
