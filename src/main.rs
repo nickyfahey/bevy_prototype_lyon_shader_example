@@ -40,7 +40,7 @@ fn setup(mut commands: Commands, mut materials: ResMut<Assets<CustomMaterial>>) 
             center: Vec2::ZERO,
         }),
         Stroke::new(LinearRgba::GREEN, 50.),
-        Fill::color(Color::WHITE),
+        Fill::color(LinearRgba::BLUE),
         Mesh2d::default(),
         MeshMaterial2d(materials.add(CustomMaterial {
             replace_color: LinearRgba::GREEN,
