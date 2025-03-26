@@ -11,7 +11,7 @@ use bevy_prototype_lyon::prelude::*;
 use bevy_prototype_lyon::shapes::Circle;
 
 /// This example uses a shader source file from the assets subdirectory
-const SHADER_ASSET_PATH: &str = "shaders/circle_shader.wgsl";
+const SHADER_ASSET_PATH: &str = "lyon_shader.wgsl";
 const CUSTOM_ATTRIBUTE: MeshVertexAttribute =
     MeshVertexAttribute::new("CustomAttribute", 988540917, VertexFormat::Float32);
 
