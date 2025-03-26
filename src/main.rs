@@ -18,7 +18,6 @@ fn main() {
         .add_plugins((
             DefaultPlugins,
             Material2dPlugin::<CustomMaterial>::default(),
-            MeshPickingPlugin,
             ShapePlugin,
         ))
         .add_systems(Startup, setup)
