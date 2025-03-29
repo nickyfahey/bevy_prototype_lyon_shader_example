@@ -2,6 +2,10 @@
 
 This is a simple example project that shows how a custom shader can be used alongside [bevy_prototype_lyon](https://github.com/Nilirad/bevy_prototype_lyon).
 
+There are basically two things you need to do to get any meteral/texture to work:
+  - Avoid `ColorMateral` being added as a required component.
+  - Add UVs to the mesh.
+
 Works with `bevy_prototype_lyon` v0.13.0 but at time of writing changes in the master brach would force `ColorMaterial` to be used.
 
 This is cobbled together from various examples scattered about the web, with thanks to the writers of the following:
